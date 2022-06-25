@@ -1,0 +1,3 @@
+data_path: "/content/gdrive/MyDrive/Kaggle/NLP/PatentPhraseMatching/data/"
+val_preds_path: "/content/gdrive/MyDrive/Kaggle/NLP/PatentPhraseMatching/preds/"
+out_dir: "/content/gdrive/MyDrive/Kaggle/NLP/PatentPhraseMatching/model/"

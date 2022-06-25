@@ -1,0 +1,17 @@
+defaults:
+  - _self_
+  - training_args: deberta-v3-small
+  - paths: colab
+
+train_run:
+  random_state: 42
+  num_labels: 1
+  label_col: "score"
+  num_folds: 5
+  run_all_folds: False
+  num_epochs: 2
+  num_workers: 2    
+  device: "cuda"
+  subset_rows_frac: 0.05
+  train_on_subset: False
+  transformer_checkpoint: "microsoft/deberta-v3-small"

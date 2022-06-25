@@ -1,0 +1,30 @@
+# EVALUATION, LOGGIN and SAVING
+output_dir: None
+evaluation_strategy: "epoch"
+save_strategy: "epoch"        
+# Number of checkpoints to save for each model
+save_total_limit: 1
+#  Whether or not to load the best model found during training at the end of training.
+load_best_model_at_end: True
+# Use in conjunction with `load_best_model_at_end` to specify the metric to use to compare two different
+# models. Must be the name of a metric returned by the evaluation with or without the prefix `"eval_"`. Will
+# default to `"loss"` if unspecified and `load_best_model_at_end=True` (to use the evaluation loss).
+# If you set this value, `greater_is_better` will default to `True`. Don't forget to set it to `False` if
+# your metric is better when lower.
+metric_for_best_model: "pearson"
+greater_is_better: True
+log_level: "warning"
+group_by_length: True
+
+# OPTIMIZATION
+num_train_epochs: 5
+per_device_train_batch_size: 64
+per_device_eval_batch_size: 128
+weight_decay: 0.01
+learning_rate: 2e-5
+warmup_ratio: 0.1
+gradient_accumulation_steps: 1
+fp16: True
+lr_scheduler_type: "linear"
+adam_epsilon: 1e-6
+#warmup_steps=1000       

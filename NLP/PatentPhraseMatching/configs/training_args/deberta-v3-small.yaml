@@ -1,0 +1,9 @@
+defaults:
+  - base_training_args
+
+# OPTIMIZATION
+num_train_epochs: 5
+per_device_train_batch_size: 32
+per_device_eval_batch_size: 64
+learning_rate: 4e-5
+gradient_accumulation_steps: 4
