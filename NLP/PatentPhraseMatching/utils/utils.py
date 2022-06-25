@@ -1,5 +1,7 @@
 import shutil
 import glob
+from sklearn import model_selection
+from datasets import Dataset
 
 def delete_checkpoints(run_dir: str):
     """
@@ -10,3 +12,46 @@ def delete_checkpoints(run_dir: str):
 
     for file in glob.glob(f"{run_dir}/checkpoint-*"):
         shutil.rmtree(file, ignore_errors=True)
+
+def strat_group_kfold_dataframe(df, target_col_name, group_col_name, random_state, num_folds=5):
+    # we create a new column called kfold and fill it with -1
+    df["kfold"] = -1
+    # randomize of shuffle the rows of dataframe before splitting is done
+    df = df.sample(frac=1, random_state=random_state).reset_index(drop=True)
+    # get the target data
+    y = df[target_col_name].values    
+    groups = df[group_col_name].values
+    # stratify data using anchor as group and score as target
+    skf = model_selection.StratifiedGroupKFold(n_splits=num_folds, shuffle=True, random_state=random_state)
+    for fold, (train_index, val_index) in enumerate(skf.split(X=df, y=y, groups=groups)):
+        df.loc[val_index, "kfold"] = fold        
+    return df            
+
+def strat_kfold_dataframe(df, target_col_name, random_state, num_folds=5):
+    # we create a new column called kfold and fill it with -1
+    df["kfold"] = -1
+    # randomize of shuffle the rows of dataframe before splitting is done
+    df.sample(frac=1, random_state=random_state).reset_index(drop=True)
+    y = df[target_col_name].values
+    skf = model_selection.StratifiedKFold(n_splits=num_folds, shuffle=True, random_state=random_state)
+    # stratification is done on the basis of y labels, a placeholder for X is sufficient
+    for fold, (train_idx, val_idx) in enumerate(skf.split(X=df, y=y)):
+        df.loc[val_idx, "kfold"] = fold
+    return df     
+
+def get_fold_ds(fold, df, preprocess_data):
+    """
+    Returns train and validation hugging face datasets corresponding to a fold
+    Args:
+        fold: fold number
+        df: train dataframe
+        preprocess_data: partial function with logic to tokenize text data
+    """
+    train_df = df[df.kfold != fold].reset_index(drop=True)
+    valid_df = df[df.kfold == fold].reset_index(drop=True)
+    ds_train_raw = Dataset.from_pandas(train_df)
+    ds_valid_raw = Dataset.from_pandas(valid_df)
+    raw_ds_col_names = ds_train_raw.column_names    
+    ds_train = ds_train_raw.map(preprocess_data, batched=True, batch_size=1000, remove_columns=raw_ds_col_names)
+    ds_valid = ds_valid_raw.map(preprocess_data, batched=True, batch_size=1000, remove_columns=raw_ds_col_names)    
+    return train_df, valid_df, ds_train, ds_valid    
