@@ -15,3 +15,10 @@ train_run:
   subset_rows_frac: 0.05
   train_on_subset: False
   transformer_checkpoint: "microsoft/deberta-v3-small"
+  experiment_name: ""
+  save_artifacts: True
+
+wandb:
+  key: None  
+  project: "USPPPM"
+  enabled: False    

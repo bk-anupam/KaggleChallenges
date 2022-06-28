@@ -1,4 +1,4 @@
-# EVALUATION, LOGGIN and SAVING
+# EVALUATION, LOGGING and SAVING
 output_dir: None
 evaluation_strategy: "epoch"
 save_strategy: "epoch"        
@@ -15,6 +15,7 @@ metric_for_best_model: "pearson"
 greater_is_better: True
 log_level: "warning"
 group_by_length: True
+report_to: None
 
 # OPTIMIZATION
 num_train_epochs: 5
