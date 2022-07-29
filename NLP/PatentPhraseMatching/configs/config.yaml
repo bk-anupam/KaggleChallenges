@@ -17,6 +17,7 @@ train_run:
   transformer_checkpoint: "microsoft/deberta-v3-small"
   experiment_name: ""
   save_artifacts: True
+  loss_type: "bcewithlogits"
 
 wandb:
   key: None  
