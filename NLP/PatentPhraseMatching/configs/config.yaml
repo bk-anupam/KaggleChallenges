@@ -16,6 +16,10 @@ train_run:
   transformer_checkpoint: "bert-base-uncased"
   experiment_name: ""
   save_artifacts: True
+  loss_type: "bcewithlogits"
+  # whether to output hidden state from each encoder layer. Set to True if we want to use a head
+  # that makes use of all intermediate representations like concatlastfour
+  output_hidden_states: False
 
 wandb:
   key: None  
