@@ -1,0 +1,39 @@
+Ridge model (remove outliers, normalize data)
+Best trial: number = 18, value = 0.16229338860497053, params = {'alpha': 2120.468857440699}
+
+Lasso (remove outliers, normalize data)
+Best trial: number = 10, value = 0.1627903459839038, params = {'alpha': 0.033288635201287185}
+
+Random Forest (remove outliers, normalize data)
+Best trial: number = 11, value = 0.14948122240295672, params = {'n_estimators': 1200, 'max_depth': 22, 'min_samples_leaf': 7, 'min_samples_split': 2, 'max_features': 'sqrt'}
+
+XGB
+Best trial: number = 99, value = 0.14853025726836952, 
+params = {'n_estimators': 1900, 'learning_rate': 0.03422265825368418, 'max_depth': 10, 'min_child_weight': 7, 
+'gamma': 0.7187948775966664, 'subsample': 0.8310629949102631, 'colsample_bytree': 0.6101944014573379, 
+'reg_alpha': 0.5998633491655526, 'reg_lambda': 34.64427633878371, 'early_stopping_rounds': 440}
+
+LGBM
+Best trial: number = 35, value = 0.14817788222546882, 
+params = {'learning_rate': 0.05566994444634741, 'n_estimators': 1975, 'max_depth': 5, 'min_child_weight': 8, 
+'subsample': 0.9702974860911247, 'colsample_bytree': 0.7459598973904827, 'num_leaves': 72, 'reg_alpha': 9.51007586938275, 
+'reg_lambda': 113.75646272270906}
+
+LGBM
+Best trial: number = 12, value = 0.14806169103162473, params = {'learning_rate': 0.04248968464174889, 'n_estimators': 650, 
+'max_depth': 12, 'min_child_weight': 4, 'subsample': 0.9894123754195663, 'colsample_bytree': 0.687112695399624, 
+'num_leaves': 92, 'reg_alpha': 0.9626149380434225, 'reg_lambda': 69.88883953488258}
+
+XGB with openfe features
+params = {
+    'n_estimators': 1900, 
+    'learning_rate': 0.009954006420252534, 
+    'max_depth': 8, 
+    'min_child_weight': 7, 
+    'gamma': 0.3038659332886192, 
+    'subsample': 0.7210534738328026, 
+    'colsample_bytree': 0.5884011514360996, 
+    'reg_alpha': 0.09662587347646415, 
+    'reg_lambda': 22.144071490612166, 
+    'early_stopping_rounds': 400
+}
