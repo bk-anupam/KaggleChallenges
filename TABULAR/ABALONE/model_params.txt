@@ -25,6 +25,7 @@ Best trial: number = 12, value = 0.14806169103162473, params = {'learning_rate':
 'num_leaves': 92, 'reg_alpha': 0.9626149380434225, 'reg_lambda': 69.88883953488258}
 
 XGB with openfe features
+Best trial: number = 37, value = 0.14680924147197982
 params = {
     'n_estimators': 1900, 
     'learning_rate': 0.009954006420252534, 
