@@ -1,1 +1,11 @@
 NLP/EvaluateStudentWriting/data/
+CV/UltraMNIST/data/
+AUDIO/MusicClassification/data/
+AUDIO/MusicClassification/model/
+AUDIO/MusicClassification/wandb/
+AUDIO/MusicClassification/logs/
+NLP/PatentPhraseMatching/data/
+TABULAR/ABALONE/data/
+TABULAR/ABALONE/output/
+*.pyc
+*.feather
