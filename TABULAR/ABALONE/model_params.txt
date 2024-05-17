@@ -13,18 +13,6 @@ params = {'n_estimators': 1900, 'learning_rate': 0.03422265825368418, 'max_depth
 'gamma': 0.7187948775966664, 'subsample': 0.8310629949102631, 'colsample_bytree': 0.6101944014573379, 
 'reg_alpha': 0.5998633491655526, 'reg_lambda': 34.64427633878371, 'early_stopping_rounds': 440}
 
-LGBM
-Best trial: number = 35, value = 0.14817788222546882, 
-params = {'learning_rate': 0.05566994444634741, 'n_estimators': 1975, 'max_depth': 5, 'min_child_weight': 8, 
-'subsample': 0.9702974860911247, 'colsample_bytree': 0.7459598973904827, 'num_leaves': 72, 'reg_alpha': 9.51007586938275, 
-'reg_lambda': 113.75646272270906}
-
-LGBM (with 20 openfe features, no outlier removal, no power transform, normalize data)
-Best trial: number = 41, value = 0.1468357123834592, 
-params = {'learning_rate': 0.009511857412941459, 'n_estimators': 1825, 'max_depth': 13, 'min_child_weight': 5, 
-'subsample': 0.6456018295560768, 'colsample_bytree': 0.5612928779407997, 'num_leaves': 112, 'reg_alpha': 0.4341259844779747, 
-'reg_lambda': 2.963431670225848, 'early_stopping_rounds': 90}
-
 XGB with 10 openfe features, no outlier removal, no power transform, normalize data
 Best trial: number = 37, value = 0.14680924147197982
 params = {
@@ -39,3 +27,28 @@ params = {
     'reg_lambda': 22.144071490612166, 
     'early_stopping_rounds': 400
 }
+
+XGB with target transform, openfe 10 features, no outlier removal, no power transform, normalize data
+Best trial: number = 45, value = 0.14650873302176728, 
+params = {'n_estimators': 2000, 'learning_rate': 0.023115952972595742, 'max_depth': 16, 'min_child_weight': 8, 
+'gamma': 0.05587514236002733, 'subsample': 0.8964656545616492, 'colsample_bytree': 0.5304646854990536, 
+'reg_alpha': 0.003975974789850544, 'reg_lambda': 76.83782452841797, 'early_stopping_rounds': 190}
+
+LGBM
+Best trial: number = 35, value = 0.14817788222546882, 
+params = {'learning_rate': 0.05566994444634741, 'n_estimators': 1975, 'max_depth': 5, 'min_child_weight': 8, 
+'subsample': 0.9702974860911247, 'colsample_bytree': 0.7459598973904827, 'num_leaves': 72, 'reg_alpha': 9.51007586938275, 
+'reg_lambda': 113.75646272270906}
+
+LGBM (with 20 openfe features, no outlier removal, no power transform, normalize data)
+Best trial: number = 41, value = 0.1468357123834592, 
+params = {'learning_rate': 0.009511857412941459, 'n_estimators': 1825, 'max_depth': 13, 'min_child_weight': 5, 
+'subsample': 0.6456018295560768, 'colsample_bytree': 0.5612928779407997, 'num_leaves': 112, 'reg_alpha': 0.4341259844779747, 
+'reg_lambda': 2.963431670225848, 'early_stopping_rounds': 90}
+
+LGBM with target transform, openfe 10 features, no outlier removal, no power transform, normalize data
+Best trial: number = 47, value = 0.14641793909601877, 
+params = {'learning_rate': 0.012066249385241715, 'n_estimators': 1300, 'max_depth': 13, 'min_child_weight': 7, 
+'subsample': 0.8611171381410113, 'colsample_bytree': 0.6642261525131186, 'num_leaves': 100, 'reg_alpha': 0.07016823562454164, 
+'reg_lambda': 64.13068016326099, 'early_stopping_rounds': 190}
+
