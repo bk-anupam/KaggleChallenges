@@ -28,11 +28,15 @@ params = {
     'early_stopping_rounds': 400
 }
 
-XGB with target transform, openfe 10 features, no outlier removal, no power transform, normalize data
+XGB 5 folds with target transform, openfe 10 features, no outlier removal, no power transform, normalize data
 Best trial: number = 45, value = 0.14650873302176728, 
 params = {'n_estimators': 2000, 'learning_rate': 0.023115952972595742, 'max_depth': 16, 'min_child_weight': 8, 
 'gamma': 0.05587514236002733, 'subsample': 0.8964656545616492, 'colsample_bytree': 0.5304646854990536, 
 'reg_alpha': 0.003975974789850544, 'reg_lambda': 76.83782452841797, 'early_stopping_rounds': 190}
+
+XGB 10 folds with target transform, openfe 10 features, no outlier removal, no power transform, normalize data
+Best trial: number = 31, value = 0.14690886468416428
+{'n_estimators': 5000, 'learning_rate': 0.0029657771080908554, 'max_depth': 17, 'min_child_weight': 10, 'gamma': 0.07223187851853652, 'subsample': 0.9701767034237834, 'colsample_bytree': 0.5859757610577498, 'reg_alpha': 0.0009279388770499497, 'reg_lambda': 10.094474121897093, 'early_stopping_rounds': 140}
 
 LGBM
 Best trial: number = 35, value = 0.14817788222546882, 
@@ -40,15 +44,18 @@ params = {'learning_rate': 0.05566994444634741, 'n_estimators': 1975, 'max_depth
 'subsample': 0.9702974860911247, 'colsample_bytree': 0.7459598973904827, 'num_leaves': 72, 'reg_alpha': 9.51007586938275, 
 'reg_lambda': 113.75646272270906}
 
-LGBM (with 20 openfe features, no outlier removal, no power transform, normalize data)
+LGBM 5 folds (with 20 openfe features, no outlier removal, no power transform, normalize data)
 Best trial: number = 41, value = 0.1468357123834592, 
 params = {'learning_rate': 0.009511857412941459, 'n_estimators': 1825, 'max_depth': 13, 'min_child_weight': 5, 
 'subsample': 0.6456018295560768, 'colsample_bytree': 0.5612928779407997, 'num_leaves': 112, 'reg_alpha': 0.4341259844779747, 
 'reg_lambda': 2.963431670225848, 'early_stopping_rounds': 90}
 
-LGBM with target transform, openfe 10 features, no outlier removal, no power transform, normalize data
+LGBM 5 folds with target transform, openfe 10 features, no outlier removal, no power transform, normalize data
 Best trial: number = 47, value = 0.14641793909601877, 
 params = {'learning_rate': 0.012066249385241715, 'n_estimators': 1300, 'max_depth': 13, 'min_child_weight': 7, 
 'subsample': 0.8611171381410113, 'colsample_bytree': 0.6642261525131186, 'num_leaves': 100, 'reg_alpha': 0.07016823562454164, 
 'reg_lambda': 64.13068016326099, 'early_stopping_rounds': 190}
 
+CatBoost 10 folds with target transform, openfe 10 features, no outlier removal, no power transform, normalize data
+Best trial: number = 25, value = 0.1469213235498215, 
+params = {'learning_rate': 0.009210152100497212, 'n_estimators': 3150, 'max_depth': 16, 'min_data_in_leaf': 16, 'subsample': 0.9519634717597183, 'colsample_bylevel': 0.8752175230716238, 'num_leaves': 56, 'reg_lambda': 52.20524852311476, 'random_strength': 0.13488445473924385, 'early_stopping_rounds': 50, 'max_bin': 213}
