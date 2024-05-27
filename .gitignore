@@ -7,5 +7,8 @@ AUDIO/MusicClassification/logs/
 NLP/PatentPhraseMatching/data/
 TABULAR/ABALONE/data/
 TABULAR/ABALONE/output/
+TABULAR/ABALONE/models/
+TABULAR/ABALONE/catboost_info/
+TABULAR/FLOOD_PREDICTION/data/
 *.pyc
 *.feather
