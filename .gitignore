@@ -12,5 +12,8 @@ TABULAR/ABALONE/catboost_info/
 TABULAR/FLOOD_PREDICTION/data/
 TABULAR/FLOOD_PREDICTION/output/
 TABULAR/FLOOD_PREDICTION/catboost_info/
+TABULAR/PS4E6/data/
+TABULAR/PS4E6/output/
+TABULAR/PS4E6/catboost_info/
 *.pyc
 *.feather
