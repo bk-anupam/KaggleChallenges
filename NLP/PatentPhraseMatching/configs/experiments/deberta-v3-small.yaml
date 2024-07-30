@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+  - override /training_args: deberta-v3-small
+
+transformer_checkpoint: "microsoft/deberta-v3-small"   
