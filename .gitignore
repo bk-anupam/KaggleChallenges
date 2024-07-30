@@ -1,5 +1,6 @@
 NLP/EvaluateStudentWriting/data/
 CV/UltraMNIST/data/
+CV/ISIC2024/data/
 AUDIO/MusicClassification/data/
 AUDIO/MusicClassification/model/
 AUDIO/MusicClassification/wandb/
@@ -15,5 +16,8 @@ TABULAR/FLOOD_PREDICTION/catboost_info/
 TABULAR/PS4E6/data/
 TABULAR/PS4E6/output/
 TABULAR/PS4E6/catboost_info/
+TABULAR/PS4E6/ensemble/
+TABULAR/PS4E7/data/
+TABULAR/PS4E7/catboost_info/
 *.pyc
 *.feather
