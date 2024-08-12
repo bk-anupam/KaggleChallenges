@@ -1,6 +1,8 @@
 NLP/EvaluateStudentWriting/data/
 CV/UltraMNIST/data/
 CV/ISIC2024/data/
+CV/ISIC2024/lightning_logs/
+CV/ISIC2024/model/
 AUDIO/MusicClassification/data/
 AUDIO/MusicClassification/model/
 AUDIO/MusicClassification/wandb/
