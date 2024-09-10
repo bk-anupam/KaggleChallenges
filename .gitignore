@@ -21,5 +21,7 @@ TABULAR/PS4E6/catboost_info/
 TABULAR/PS4E6/ensemble/
 TABULAR/PS4E7/data/
 TABULAR/PS4E7/catboost_info/
+TABULAR/PS4E9/data/
+TABULAR/PS4E9/catboost_info/
 *.pyc
 *.feather
